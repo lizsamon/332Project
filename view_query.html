@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Run Database Queries</title>
+    <link rel="stylesheet" type="text/css" href="style_query.css"> 
+    <script>
+        function showQueryFields() {
+            var selectedQuery = document.getElementById("query_select").value;
+            var queryFields = document.getElementsByClassName("query-fields");
+
+            for (var i = 0; i < queryFields.length; i++) {
+                queryFields[i].style.display = "none";
+            }
+
+            if (selectedQuery) {
+                document.getElementById(selectedQuery).style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Run Database Queries</h1>
+    <form action="server_view_query.php" method="post">
+        <label for="query_select">Select Query:</label>
+        <select id="query_select" name="query_select" onchange="showQueryFields()">
+            <option value="">--Select a Query--</option>
+            <option value="Query 1">Query 1: Display all course sections taught by a specific professor.</option>
+            <option value="Query 2">Query 2: Display the number of students per letter grade in a specific course section.</option>
+            <option value="Query 3">Query 3: Display the number of students enrolled in a specific course section and the course section details.</option>
+            <option value="Query 4">Query 4: Display a specific student's grades for all courses taken.</option>
+        </select>
+        <br><br>
+
+        <!-- Query 1 -->
+        <fieldset id="Query 1" class="query-fields" style="display:none;">
+            <legend>Query 1: Display all course sections taught by a specific professor.</legend>
+            <label for="professor_ssn">Professor SSN:</label>
+            <input type="text" id="professor_ssn" name="professor_ssn"><br>
+        </fieldset>
+        <br>
+
+        <!-- Query 2 -->
+        <fieldset id="Query 2" class="query-fields" style="display:none;">
+            <legend>Query 2: Display the number of students per letter grade in a specific course section.</legend>
+            <label for="enrollment_course">Course Number:</label>
+            <input type="text" id="enrollment_course" name="enrollment_course"><br>
+            <label for="enrollment_section">Section Number:</label>
+            <input type="text" id="enrollment_section" name="enrollment_section"><br>
+        </fieldset>
+        <br>
+
+        <!-- Query 3 -->
+        <fieldset id="Query 3" class="query-fields" style="display:none;">
+            <legend>Query 3: Display the number of students enrolled in each section of a specific course and include course section details.</legend>
+            <label for="section_course">Course Number:</label>
+            <input type="text" id="section_course" name="section_course"><br>
+        </fieldset>
+        <br>
+
+        <!-- Query 4 -->
+        <fieldset id="Query 4" class="query-fields" style="display:none;">
+            <legend>Query 4: Display a specific student's grades for all courses taken.</legend>
+            <label for="student_cwid">Student CWID:</label>
+            <input type="text" id="student_cwid" name="student_cwid"><br>
+        </fieldset>
+        <br>
+
+        <input type="submit" value="Run Query">
+    </form>
+</body>
+</html>
+
+

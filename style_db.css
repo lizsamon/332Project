@@ -1,0 +1,57 @@
+
+body {
+    font-family: Montserrat, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('https://www.awn.com/sites/default/files/styles/inline/public/image/attached/54675-scareschoolcolorexplorationdicetsutsumidigital2010-620.jpg?itok=p77OvB0I');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background-color: #ffffff; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkbox-group {
+    margin: 10px 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}

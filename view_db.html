@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Table/s</title>
+    <link rel="stylesheet" type="text/css" href="style_db.css">
+</head>
+<body>
+    <h1>Select Database Tables to Display</h1>
+    <form action="server_view_db.php" method="post">
+        <input type="checkbox" name="tables[]" value="Professor College_degrees"> College Degrees<br>
+        <input type="checkbox" name="tables[]" value="Course"> Course<br>
+        <input type="checkbox" name="tables[]" value="Department"> Department<br>
+        <input type="checkbox" name="tables[]" value="Enrollment_Record"> Enrollment Record<br>
+        <input type="checkbox" name="tables[]" value="Minors"> Minors<br>
+        <input type="checkbox" name="tables[]" value="Professor"> Professor<br>
+        <input type="checkbox" name="tables[]" value="Section"> Section<br>
+        <input type="checkbox" name="tables[]" value="Student"> Student<br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
